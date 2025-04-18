@@ -17,6 +17,7 @@ class User(SQLModel, table=True):
     name: str
     email: str
     password: str
+    admin: bool
 
     def verify_password(self, password):
         """
@@ -44,9 +45,12 @@ class UserCreate(SQLModel):
     name: str
     email: str
     password: str
+    admin: bool
 
 class UserUpdate(SQLModel):
     name: str | None = None
     email: str | None = None
     password: str | None = None
+    admin: bool | None = None
+ 
 

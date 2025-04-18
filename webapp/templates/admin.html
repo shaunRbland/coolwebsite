@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><title>Admin Dashboard</title></head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <h1>Welcome, {{ user.id }}</h1>
+    <p>admin: {{ user.name }} - {{ user.email }} - {{ user.password }} - {{ user.admin }}</p>
+    <p>your token: {{ token }}</p>  
+    <p>is admin: {{ is_admin }}</p>  
+
+    <p>all users</p>
+    <ul>
+        {% for user in all_users %}
+            <li> {{ user.id }} - {{ user.name }} - {{ user.email }} - {{ user.password }} - {{ user.admin }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
